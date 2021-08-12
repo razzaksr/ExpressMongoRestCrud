@@ -3,6 +3,12 @@ const router=express.Router()
 const mongoose=require('mongoose')
 const model=mongoose.model('techie')
 
+
+router.get('/wel',async(req,res)=>{
+    console.log('request recieved')
+    res.json("Welcome to server")
+})
+
 // List
 router.get('/',async (req,res)=>{
     //res.send('hi connected')
