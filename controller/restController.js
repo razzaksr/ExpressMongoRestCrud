@@ -32,7 +32,8 @@ router.post('/',async (req,res)=>{
 //Update
 router.put('/',async (req,res)=>{
     
-    const data=await model.findOneAndUpdate(id=req.body._id,req.body,{new:true})
+    //const data=await model.findOneAndUpdate(id=req.body._id,req.body,{new:true})
+    const data=await model.updateOne({_id:req.body._id},req.body)
     res.json(data)
 })
 
